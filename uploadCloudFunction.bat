@@ -1,0 +1,1 @@
+"E:\360downloads\΢��web�����߹���\cli.bat" cloud functions deploy --e cloud1-2gnwgclg44e97d5a --n quickstartFunctions --r --project "E:\.idea\������\����С����\�Ʒ���test" --report

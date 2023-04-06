@@ -1,0 +1,17 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<view class="title">
+  <view class="title">{{detailList[newsID].title}}</view>
+</view>
+<view class="publisher-info">
+  <image class="face" src='http://www.mba.ecnu.edu.cn/_upload/article/9c/7b/866ad94b433fb839471815a6fab9/db3b1980-3527-4ee0-867c-998a34659037.png'></image>
+
+  <view class="words">
+    <view class="nickname">数据学院</view>
+    <view class="normal-info">
+      <class class="original">原创</class>
+      <view class="create-time">发布于{{detailList[newsID].time}}</view>
+    </view>
+  </view>
+</view>
+
+<rich-text class="news-desc" nodes="{{detailList[newsID].content}}"></rich-text>

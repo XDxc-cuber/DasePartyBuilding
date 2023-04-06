@@ -1,0 +1,54 @@
+/* pages/alwaysStudy/alwaysStudy.wxss */
+.news{
+    padding:5rpx 30rpx 30rpx 30rpx;
+    background-color: #7cc1f0;
+}
+.pic-words{
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+    /* border: 1rpx solid yellowgreen; */
+    background-color: #ffffff;
+    padding: 20rpx;
+}
+.news-title_title-words{
+    font-size: 35rpx;
+    width: 670rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+}
+.create-time{
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
+}
+.publish{
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    color: gray;
+    margin-top: 10rpx;
+    width: 500rpx;
+}
+
+.publisher{
+    /* height: 40rpx; */
+    width: 260rpx;
+    /* display: block; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} 
+
+/*新闻专栏内的所有文字*/
+.words{
+    width: 450rpx;
+    height: 120rpx;
+}
+/*新闻专栏内的图片封面*/
+.cover{
+    width: 100%;
+    height: 320rpx;
+}

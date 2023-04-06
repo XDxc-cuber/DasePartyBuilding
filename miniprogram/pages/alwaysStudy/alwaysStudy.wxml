@@ -1,0 +1,13 @@
+<!--pages/alwaysStudy/alwaysStudy.wxml-->
+<image src="https://i0.hdslb.com/bfs/album/ee10a5dd18bd64b530ce593d80af833183c67429.png@518w.webp" class='cover'></image>
+<view class='news'>
+    <view class='pic-words' wx:for="{{alwaysStudyImgs}}" wx:key="id" data-graphid="{{item.id}}" bindtap='showGraphDetail'>
+        <view class='words'>
+            <view class='news-title_title-words'>{{item.title}}</view>
+            <view class='publish'>
+            <view class='publisher'>人民网-中国共产党新闻网</view>
+            <view class='create-time'>{{item.time}}</view>
+            </view>
+        </view>
+    </view>
+</view>

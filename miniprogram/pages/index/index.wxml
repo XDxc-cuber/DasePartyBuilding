@@ -1,0 +1,80 @@
+
+  <view class="nav_wrap">
+    <scroll-view class="nav" scroll-x >
+      <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}"  wx:for="{{navlist}}" wx:key="index">
+        {{item.text}}
+      </view>
+    </scroll-view>
+    
+  </view>
+
+<!-- 对应页面切换 -->
+<swiper current="{{currentIndexNav}}" style="height:{{winHeight}}rpx">
+  <!-- 学校动态 -->
+  <swiper-item>
+    <view>
+      <swiper class="swiper__container" indicator-dots autoplay indicator-active-color="rgba(255,255,255,.7)">
+        <swiper-item wx:for="{{swiperList}}" wx:key="id"  data-newsid="{{item.id}}" bindtap='showDetail'>
+          <image src="{{item.image_url}}" class="swiper_item" ></image>
+          <view class="swiper__desc">
+            <text class="swiper__text">{{item.title}}</text>
+            <!--<text class="swiper__id">[{{index+1}}/{{swiperList.length}}]</text>-->
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <view class='news'>
+      <view class='pic-words' wx:for="{{newsList}}" wx:key="title" data-newsid="{{item.id}}" bindtap='showDetail'>
+        <view class='words'>
+          <view class='news-title_title-words'>{{item.title}}</view>
+          <view class='publish'>
+            <view class='publisher'>{{item.publisher}}</view>
+            <view class='create-time'>{{item.time}}</view>
+          </view>
+        </view>
+        <!--<image src="{{item.image_url}}" class='cover'></image>-->
+      </view>
+    </view>
+    
+  </swiper-item>
+
+  <!-- 时习之 -->
+  <swiper-item>
+    <!-- <web-view src="http://cpc.people.com.cn/xuexi/GB/433640/index.html">
+    </web-view> -->
+    
+    <view>
+      <image class="daily_cover" src="https://i.loli.net/2021/04/24/sopbw24IDE9hFYi.png"></image>
+    </view>
+    <image class="daily_cover2" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20191205%2Ffef592f0d71f415d909921422b925a0f.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1635302761&t=1e356f3f0c5cc440d26b3a99f5cbdb4c"></image>
+    <button class='alwaysStudy-button' type="primary" bindtap='onSwiperTap'>开始今日学习</button>
+    <!-- <view class='daliy-pic-words'>
+      <view class='date'>【4月24日】</view>    
+      <image class="daliy-news-cover" src="http://p1.img.cctvpic.com/photoworkspace/contentimg/2021/04/21/2021042114572193998.png"></image>
+      <view class='daily-events' wx:for="{{eventsList}}" wx:key="date">
+        <text class="daliy-news-date">{{item.date}}</text>
+        <text class="daliy-news-words" decode="{{true}}">
+          &emsp;&emsp;{{item.texts}}</text>
+      </view>
+    </view> -->
+
+
+  </swiper-item>
+  <!--图解党建-->
+  <swiper-item>
+    <image src="http://dangjian.people.com.cn/NMediaFile/2019/0506/MAIN201905061547000132085967053.jpg" class='cover'></image>
+    <view class='news'>
+      <view class='pic-words' wx:for="{{graphList}}" wx:key="id" data-graphid="{{item.id}}" bindtap='showGraphDetail'>
+        <view class='words'>
+          <view class='news-title_title-words'>{{item.title}}</view>
+          <view class='publish'>
+            <!--<view class='publisher'>{{item.publisher}}</view>-->
+            <view class='create-time'>{{item.time}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
